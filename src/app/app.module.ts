@@ -20,8 +20,9 @@ import { EventAppComponent } from './event-app.component';
 //import {  } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
 //import { } from './events/shared/event.service';
-import { TOASTER_TOKEN , Toastr} from './common/toastr.service';
-import {CollapsibleWellComponent } from './common/collapsible-well.component';
+//import { TOASTER_TOKEN , Toastr} from './common/toastr.service';
+import { JQ_TOKEN, TOASTER_TOKEN, Toastr, CollapsibleWellComponent } from './common/index';
+//import {CollapsibleWellComponent } from './common/collapsible-well.component';
 //import {  } from './events/event-details/event-details.component';
 import { appRoutes } from './router';
 //import {  } from './events/create-event.component';
@@ -29,7 +30,8 @@ import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
 //import {  } from './events/event-details/event-router-activator.component';
 //import { EventListResolver } from './events/event-list-resolve.service';
-declare let toastr:Toastr
+ let toastr:Toastr = window['toastr'];
+ let jQuery = window['$'];
 
 @NgModule({
   declarations: [
