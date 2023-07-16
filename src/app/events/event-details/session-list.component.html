@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row" *ngFor="let session of visibleSessions">
     <div class="col-md-10">
       <collapsible-well>
@@ -13,4 +14,21 @@
         </div>
       </collapsible-well>
     </div>
+=======
+<div class="row" *ngFor="let session of visibleSessions">
+    <div class="col-md-10">
+      <collapsible-well>
+        <div well-title>
+{{session.name}}
+<i *ngIf="session.voters.length>3" class="glyphicon glyphicon-fire" style="color:red"></i>
+        </div>
+        <div well-body>
+          <h6>{{session.presenter}}</h6>
+          <span>Duration: {{session.duration | duration}}</span><br />
+          <span>Level: {{session.level}}</span>
+          <p>{{session.abstract}}</p>
+        </div>
+      </collapsible-well>
+    </div>
+>>>>>>> d17b4392b14f7af68992776a5d6520727993fe39
   </div>
